@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Login - Enter the Anime World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <div id="login-container" class="container">
+        <div class="login-header">
+            <h1>🎌 Anime World</h1>
+            <p>Enter the ultimate anime experience</p>
+        </div>
+        
+        <form id="login-form" class="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required placeholder="Enter your username">
+                <span class="input-icon">👤</span>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <span class="input-icon">🔒</span>
+            </div>
+            <button type="submit" class="login-btn">
+                <span>Enter Anime World</span>
+                <div class="btn-animation"></div>
+            </button>
+            <div id="error-message" class="error-message"></div>
+        </form>
+        <div class="demo-credentials">
+            <p>Demo credentials:</p>
+            <span>Username: <strong>animefan</strong></span>
+            <span>Password: <strong>otaku123</strong></span>
+        </div>
+    </div>
+
+    <div id="anime-content" class="container hidden">
+        <div class="welcome-header">
+            <h2>Welcome back, <span id="display-username"></span>! 🎉</h2>
+            <p>Explore the amazing world of anime</p>
+        </div>
+        <div class="anime-gallery">
+            <div class="anime-item" data-anime="one-piece">
+                <div class="anime-image">
+                    <img src="img/onepiece.jpg" alt="One Piece">
+                    <div class="rating">⭐ 9.5</div>
+                    <div class="play-overlay">
+                        <button class="play-btn">▶️ Watch</button>
+                    </div>
+                </div>
+                <div class="anime-info">
+                    <h3>One Piece</h3>
+                    <p>An epic adventure on the Grand Line with Monkey D. Luffy!</p>
+                    <div class="anime-stats">
+                        <span class="episodes">1000+ Episodes</span>
+                        <span class="genre">Adventure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="anime-item" data-anime="naruto">
+                <div class="anime-image">
+                    <img src="img/naruto.jpg" alt="Naruto">
+                    <div class="rating">⭐ 9.2</div>
+                    <div class="play-overlay">
+                        <button class="play-btn">▶️ Watch</button>
+                    </div>
+                </div>
+                <div class="anime-info">
+                    <h3>Naruto</h3>
+                    <p>A ninja's journey to become the strongest Hokage!</p>
+                    <div class="anime-stats">
+                        <span class="episodes">720 Episodes</span>
+                        <span class="genre">Action</span>
+                    </div>
+                </div>
+            </div>
+            <div class="anime-item" data-anime="attack-on-titan">
+                <div class="anime-image">
+                    <img src="img/aot.jpg" alt="Attack on Titan">
+                    <div class="rating">⭐ 9.8</div>
+                    <div class="play-overlay">
+                        <button class="play-btn">▶️ Watch</button>
+                    </div>
+                </div>
+                <div class="anime-info">
+                    <h3>Attack on Titan</h3>
+                    <p>Humanity's desperate struggle against the giant Titans!</p>
+                    <div class="anime-stats">
+                        <span class="episodes">87 Episodes</span>
+                        <span class="genre">Drama</span>
+                    </div>
+                </div>
+            </div>
+            <div class="anime-item" data-anime="demon-slayer">
+                <div class="anime-image">
+                    <img src="img/ds.jpg" alt="Demon Slayer">
+                    <div class="rating">⭐ 9.1</div>
+                    <div class="play-overlay">
+                        <button class="play-btn">▶️ Watch</button>
+                    </div>
+                </div>
+                <div class="anime-info">
+                    <h3>Demon Slayer</h3>
+                    <p>Tanjiro's quest to save his sister and defeat demons!</p>
+                    <div class="anime-stats">
+                        <span class="episodes">44 Episodes</span>
+                        <span class="genre">Supernatural</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="user-actions">
+            <button id="logout-button" class="logout-btn">
+                <span>🚪 Logout</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

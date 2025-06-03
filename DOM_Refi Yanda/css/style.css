@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow-x: hidden;
+    }
+    .background-animation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+    .floating-element {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+    }
+    .floating-element:nth-child(1) {
+        top: 20%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+    .floating-element:nth-child(2) {
+        top: 60%;
+        right: 10%;
+        animation-delay: 2s;
+    }
+    .floating-element:nth-child(3) {
+        bottom: 20%;
+        left: 50%;
+        animation-delay: 4s;
+    }
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+    .container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 450px;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .container.hidden {
+        display: none;
+    }
+    #anime-content {
+        max-width: 1200px;
+        width: 95%;
+    }
+    .login-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+    .login-header p {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    .login-form {
+        margin-bottom: 30px;
+    }
+    .input-group {
+        position: relative;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    .input-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #333;
+        font-size: 0.95rem;
+    }
+    .input-group input {
+        width: 100%;
+        padding: 15px 50px 15px 15px;
+        border: 2px solid #e1e5e9;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #f8f9fa;
+    }
+    .input-group input:focus {
+        outline: none;
+        border-color: #667eea;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    .input-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        margin-top: 12px;
+    }
+    .login-btn {
+        position: relative;
+        width: 100%;
+        padding: 15px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+    }
+    .login-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    }
+    .login-btn:active {
+        transform: translateY(0);
+    }
+    .btn-animation {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.5s;
+    }
+    .login-btn:hover .btn-animation {
+        left: 100%;
+    }
+    .error-message {
+        color: #e74c3c;
+        font-weight: 500;
+        margin-top: 15px;
+        padding: 10px;
+        background: rgba(231, 76, 60, 0.1);
+        border-radius: 8px;
+        border-left: 4px solid #e74c3c;
+    }
+    .demo-credentials {
+        background: rgba(102, 126, 234, 0.1);
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid rgba(102, 126, 234, 0.2);
+    }
+    .demo-credentials p {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+    }
+    .demo-credentials span {
+        display: block;
+        color: #667eea;
+        font-size: 0.9rem;
+        margin: 2px 0;
+    }
+    .welcome-header h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .welcome-header p {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+    .anime-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .anime-item {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .anime-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    .anime-image {
+        position: relative;
+        overflow: hidden;
+    }
+    .anime-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    .anime-item:hover .anime-image img {
+        transform: scale(1.1);
+    }
+    .rating {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    .play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .anime-item:hover .play-overlay {
+        opacity: 1;
+    }
+    .play-btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .play-btn:hover {
+        background: #764ba2;
+        transform: scale(1.05);
+    }
+    .anime-info {
+        padding: 20px;
+    }
+    .anime-info h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+    }
+    .anime-info p {
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    .anime-stats {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .anime-stats span {
+        background: rgba(102, 126, 234, 0.1);
+        color: #667eea;
+        padding: 4px 12px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .user-actions {
+        text-align: center;
+    }
+    .logout-btn {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .logout-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
+    }
+    @media (max-width: 768px) {
+        .container {
+            padding: 30px 20px;
+            margin: 20px;
+        }
+        .login-header h1 {
+            font-size: 2rem;
+        }
+        .welcome-header h2 {
+            font-size: 1.8rem;
+        }
+        .anime-gallery {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .anime-item {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 480px) {
+        .login-header h1 {
+            font-size: 1.8rem;
+        }
+        .container {
+            padding: 25px 15px;
+        }
+        .input-group input {
+            padding: 12px 45px 12px 12px;
+        }
+        .login-btn {
+            padding: 12px;
+            font-size: 1rem;
+        }
+    }
